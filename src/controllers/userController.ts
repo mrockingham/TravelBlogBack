@@ -119,12 +119,8 @@ export const loginUser = async (req: Request, res: Response) => {
 // Get current User Profile
 export const getCurrentUserProfile = async (req: any, res: Response) => {
     console.log(req.body)
-    const { _id, name, email } = await User.findById(req.user.id) as any
 
-    res.status(200).json({
-        _id,
-        name,
-        email,
-    })
+
+    res.status(200).json(req.user)
 
 }
