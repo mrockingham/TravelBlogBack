@@ -8,9 +8,10 @@ import Routes from './router/index';
 const server = express();
 const port = process.env.PORT
 
-import mongoose, { ConnectOptions } from 'mongoose';
 
-dotenv.config();
+
+
+server.use(cors());
 
 
 connectDB();
@@ -19,7 +20,6 @@ dotenv.config();
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }))
 server.use(express.static("public"))
-server.use(cors());
 server.use(helmet());
 
 
