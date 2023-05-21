@@ -12,6 +12,7 @@ const port = process.env.PORT || 5000;
 
 
 server.use(cors());
+server.options('*', cors());
 
 
 connectDB();
