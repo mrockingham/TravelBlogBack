@@ -6,12 +6,9 @@ import helmet from 'helmet';
 import Routes from './router/index';
 
 const server = express();
-server.use(cors({
-    origin: 'https://travel-blog-front.vercel.app',
-    // Additional options if needed
-}));
-server.options('*', cors());
+server.use(cors());
 const port = process.env.PORT || 5000;
+server.options('*', cors());
 
 
 
