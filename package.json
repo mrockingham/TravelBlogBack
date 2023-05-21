@@ -19,17 +19,7 @@
     "url": "https://github.com/mrockingham/TravelBlogBack/issues"
   },
   "homepage": "https://github.com/mrockingham/TravelBlogBack#readme",
-  "devDependencies": {
-    "@types/bcryptjs": "^2.4.2",
-    "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.17",
-    "@types/firebase": "^3.2.1",
-    "@types/jsonwebtoken": "^9.0.1",
-    "@types/mongodb": "^4.0.7",
-    "@types/node": "^18.14.6",
-    "@types/nodemailer": "^6.4.7",
-    "prettier": "^2.8.4"
-  },
+  "devDependencies": {},
   "dependencies": {
     "nodemon": "^2.0.21",
     "@sendgrid/mail": "^7.7.0",
@@ -44,6 +34,15 @@
     "mongoose": "^7.0.0",
     "nodemailer": "^6.9.1",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/firebase": "^3.2.1",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/mongodb": "^4.0.7",
+    "@types/node": "^18.14.6",
+    "@types/nodemailer": "^6.4.7",
+    "prettier": "^2.8.4"
   }
 }
