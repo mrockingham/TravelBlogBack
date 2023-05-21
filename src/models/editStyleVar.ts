@@ -13,11 +13,16 @@ const editStyleVarSchema = new mongoose.Schema({
         type: [String],
 
     },
+    backgroundColor: {
+        type: String,
+    },
     heroBox: {
         type: {
             headerAlign: String,
             headerText: String,
+            headerTextColor: String,
             backgroundImage: String,
+            backGroundImageOpacity: String,
         }
     }
 
