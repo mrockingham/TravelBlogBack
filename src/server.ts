@@ -6,7 +6,7 @@ import helmet from 'helmet';
 import Routes from './router/index';
 
 const server = express();
-const port = process.env.PORT
+const port = process.env.PORT || 5000;
 
 
 
