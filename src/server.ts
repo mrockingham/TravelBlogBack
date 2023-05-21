@@ -11,7 +11,10 @@ const port = process.env.PORT || 5000;
 
 
 
-server.use(cors());
+server.use(cors({
+    origin: 'https://travel-blog-front.vercel.app',
+    // Additional options if needed
+}));
 
 
 connectDB();
