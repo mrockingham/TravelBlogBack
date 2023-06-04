@@ -29,7 +29,16 @@ export const putEditStyle = async (req: Request, res: Response) => {
     console.log(req.body)
     try {
         const editStyle = await EditStyle.updateOne(req.body);
-        res.json(editStyle);
+        console.log(editStyle)
+        if (editStyle.modifiedCount === 0) {
+            res.status(404).json({ message: 'Not Found' });
+        } else {
+            const getStyle = await EditStyle.find({})
+            res.json(getStyle);
+        }
+
+
+
     } catch (error) {
         res.status(500).json({ message: 'Server Error' });
     }
