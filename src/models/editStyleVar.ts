@@ -21,6 +21,7 @@ const editStyleVarSchema = new mongoose.Schema({
             headerAlign: String,
             headerText: String,
             headerTextColor: String,
+            headerFontStyle: String,
             backgroundImage: String,
             backGroundImageOpacity: String,
             bodyText: String,
