@@ -14,6 +14,9 @@ const imagesSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please add an image'],
     },
+    description: {
+        type: String,
+    },
 })
 
 const Images = mongoose.model('images', imagesSchema)

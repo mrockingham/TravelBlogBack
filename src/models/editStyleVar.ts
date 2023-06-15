@@ -30,6 +30,22 @@ const editStyleVarSchema = new mongoose.Schema({
             bodyTextSize: String,
             bodySpaceTop: Number,
         }
+    },
+    MiddleContentBox: {
+        type: {
+            headerAlign: String,
+            headerText: String,
+            headerTextColor: String,
+            headerFontStyle: String,
+            backgroundImage1: String,
+            backgroundImage2: String,
+            backGroundImageOpacity: String,
+            bodyText: String,
+            bodyTextColor: String,
+            bodyTextAlign: String,
+            bodyTextSize: String,
+            bodySpaceTop: Number,
+        }
     }
 
 })
