@@ -15,7 +15,6 @@ server.options('*', cors());
 
 
 
-connectDB();
 dotenv.config();
 
 server.use(express.json());
@@ -24,10 +23,14 @@ server.use(express.static("public"))
 server.use(helmet());
 
 
-server.listen(port, () =>
-    console.log(`\n** Server is listening on port ${port} **\n`)
-);
 server.use('/app', Routes);
 server.get('/', (req: any, res: any) => {
     res.status(200).json({ api: 'blog is UP' });
+});
+connectDB().then(() => {
+
+    server.listen(port, () =>
+        console.log(`\n** Server is listening on port ${port} **\n`)
+    );
+
 });
