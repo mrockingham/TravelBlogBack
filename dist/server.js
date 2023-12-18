@@ -13,7 +13,7 @@ const helmet_1 = __importDefault(require('helmet'));
 const index_1 = __importDefault(require('./router/index'));
 const server = (0, express_1.default)();
 server.use((0, cors_1.default)());
-const port = process.env.PORT || 5001;
+const port = process.env.PORT;
 server.options('*', (0, cors_1.default)());
 (0, config_1.default)();
 dotenv_1.default.config();
