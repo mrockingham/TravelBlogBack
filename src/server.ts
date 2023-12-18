@@ -10,7 +10,7 @@ server.use(cors());
 const port = process.env.PORT || 5001;
 server.options('*', cors());
 
-connectDB()
+// connectDB()
 
 dotenv.config();
 server.use(express.json());
@@ -22,6 +22,13 @@ server.use('/app', Routes);
 server.get('/', (req, res) => {
   res.status(200).json({ api: 'blog is UP' });
 });
-server.listen(port, () =>
-  console.log(`\n** Server is listening on port ${port} **\n`)
-);
+// server.listen(port, () =>
+//   console.log(`\n** Server is listening on port ${port} **\n`)
+// );
+
+connectDB().then(() => {
+
+  server.listen(port, () =>
+    console.log(`\n** Server is listening on port ${port} **\n`)
+  );
+});
