@@ -22,7 +22,6 @@ server.use('/app', Routes);
 server.get('/', (req, res) => {
   res.status(200).json({ api: 'blog is UP' });
 });
-
 server.listen(port, () =>
   console.log(`\n** Server is listening on port ${port} **\n`)
 );
